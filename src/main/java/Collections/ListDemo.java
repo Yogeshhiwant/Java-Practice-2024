@@ -1,6 +1,8 @@
 package Collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import ImpClass.Employee;
@@ -16,6 +18,24 @@ public class ListDemo {
 
         System.out.println("\nList Methods :) !\n");
 
+//---------------------------- Creating List --------------------------------------------------------------------
+        ArrayList<Integer> list = new ArrayList<>();
+        list.trimToSize();      // Trims to the current size of the array. ArrayList method
+        System.out.println(list.getClass().getName());
+
+        List<String> list1 = Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+        list1.set(1,"X");              // we can only modify/set elements, cannot add elements.
+        System.out.println(list1.getClass().getName());
+
+        String[] arr = {"Apple","Banana","Mango"};
+        List<String> list2 = Arrays.asList(arr);
+        System.out.println(list2.getClass().getName());
+
+        List<Integer> integers = List.of(1, 2, 3, 4, 5);
+//        integers.set(2,50);           // we cannot do operations on Lists created by List.of() method.
+
+        Comparator<Employee> comparator = Comparator.comparing(Employee::getId).reversed().thenComparing(Employee::getName);
+
 //----------------- integer list ----------------------------------------------------------------------------------------------------------------------------------------
 
         List<Integer> integerList = new ArrayList<Integer>();      // integer List
@@ -25,7 +45,7 @@ public class ListDemo {
         integerList.add(21);
         integerList.add(2, 25);
 
-        System.out.println("IntegerList: " + integerList);
+ //       System.out.println("IntegerList: " + integerList);
 
 
 //----------------- string list ----------------------------------------------------------------------------------------------------------------------------------------
@@ -43,7 +63,7 @@ public class ListDemo {
 //    stringList.remove(1);                              // Removes the element at the specified position in this list (optional operation).
 
 
-        System.out.println("StringList: " + stringList);
+ //       System.out.println("StringList: " + stringList);
 
 
 //--------------------- Employee(custom object) list ---------------------------------------------------------------------------------------------------------------------------------
@@ -58,7 +78,7 @@ public class ListDemo {
 
         employeeList.add(listEmployee);
 
-        System.out.println("EmployeeList: " + employeeList);
+ //       System.out.println("EmployeeList: " + employeeList);
 
 //    System.out.println(employeeList.indexOf(listEmployee));                     // returns -1 if list does not contain the item
 
