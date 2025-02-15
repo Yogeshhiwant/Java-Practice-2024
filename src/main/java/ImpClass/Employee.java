@@ -4,21 +4,8 @@ package ImpClass;
 import java.util.Objects;
 
 public class Employee implements Comparable<Employee> {
-
     private int id;
     private String name;
-//    private String gender;
-//    private long salary;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Employee employee = (Employee) o;
-        return id == employee.id && Objects.equals(name, employee.name);
-    }
 
     public Employee(int id, String name) {
         super();
@@ -42,13 +29,22 @@ public class Employee implements Comparable<Employee> {
         this.name = name;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Employee employee = (Employee) obj;
+        return id == employee.getId() && Objects.equals(name, employee.getName());
+    }
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
 
+    public static void main(String[] args) {
+
+    }
     // Comparable interface overrides compareTo(Object o) method
     public int compareTo(Employee o) {
         return this.id - o.id;

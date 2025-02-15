@@ -21,7 +21,7 @@ public class MapDemo {
 
 //    ------------------------------- HashMap is implementation of Map interface ---------------------------------------
 
-		Map<Integer, Integer> integerIntegerHashMap = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> integerIntegerHashMap = new HashMap<Integer, Integer>(20,0.5f);
 		integerIntegerHashMap.put(1, 101);
 		integerIntegerHashMap.put(2, 102);
 		integerIntegerHashMap.put(3, 103);
@@ -77,7 +77,13 @@ public class MapDemo {
 		integerStringTreeMap.put(4, "Ravi Bishnoi");
 		integerStringTreeMap.put(5, "Yuzi Chahal");
 
+
 		System.out.println("IntegerStringTreeMap: " + integerStringTreeMap);
+
+		Set<Integer> integers = integerIntegerHashMap.keySet();
+		for (Integer integer : integers) {
+			System.out.println(integerIntegerHashMap.get(integer));
+		}
 	}
 
 }

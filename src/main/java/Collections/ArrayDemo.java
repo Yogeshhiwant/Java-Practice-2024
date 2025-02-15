@@ -63,7 +63,6 @@ public class ArrayDemo {
 			//System.out.println(employee);
 		}
 
-		Arrays.sort(employees, Employee.NameComparator); // sort using Comparator
 //		System.out.println(Arrays.toString(employees));
 
 	}
