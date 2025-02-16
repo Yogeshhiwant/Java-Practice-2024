@@ -66,24 +66,5 @@ public class MapDemo {
 		integerStringHashMap.get(2); 									// for getting the element by key value
 
 		System.out.println("IntegerStringHashMap: " + integerStringHashMap);
-
-//  ----------------------------- TreeMap is implementation of SortedMap -----------------------------------------------
-
-		Map<Integer, String> integerStringTreeMap = new TreeMap<Integer, String>();
-
-		integerStringTreeMap.put(1, "Ravindra Jadeja");
-		integerStringTreeMap.put(2, "Ravi Ashwin");
-		integerStringTreeMap.put(3, "Kuldeep Yadav");
-		integerStringTreeMap.put(4, "Ravi Bishnoi");
-		integerStringTreeMap.put(5, "Yuzi Chahal");
-
-
-		System.out.println("IntegerStringTreeMap: " + integerStringTreeMap);
-
-		Set<Integer> integers = integerIntegerHashMap.keySet();
-		for (Integer integer : integers) {
-			System.out.println(integerIntegerHashMap.get(integer));
-		}
 	}
-
 }

@@ -63,7 +63,7 @@ public class CollectorsDemo {
         System.out.println(words.stream().collect(Collectors.mapping(x -> x.toUpperCase(), Collectors.toList())));
 
         // 11. toMap
-        words.stream().collect(Collectors.toMap())
+       // words.stream().collect(Collectors.toMap())
 
         // Example 1: Collecting Names by Length
         List<String> l1 = Arrays.asList("Anna", "Bob", "Alexander", "Brian", "Alice");
